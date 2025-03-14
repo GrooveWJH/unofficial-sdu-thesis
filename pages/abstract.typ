@@ -7,6 +7,8 @@
   body-en: "",
   keywords-en: (),
 ) = {
+  set page(header: none)
+
   set text(font: fonts.宋体)
   {
     set par(first-line-indent: 2em, justify: true)
@@ -38,7 +40,7 @@
     {
       set par(spacing: 1em)
       v(15pt)
-      align(center)[#text(size: fontsize.小二,font:"Times New Roman",weight: "bold")[ABSTRACT]]
+      align(center)[#text(size: fontsize.小二, font: "Times New Roman", weight: "bold")[ABSTRACT]]
     }
     // 英文摘要正文
     {

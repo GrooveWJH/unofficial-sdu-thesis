@@ -4,6 +4,7 @@
 #let outline-page(
   info: (:),
 ) = {
+  set page(header: none)
 
   show outline.entry: it => {
     set text(font: fonts.宋体, size: fontsize.小四)

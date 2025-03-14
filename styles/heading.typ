@@ -38,16 +38,16 @@
     set par(first-line-indent: 0em)
     if it.level == 1 {
       set align(center)
-      set text(weight: "bold", size: fontsize.小二)
+      set text(weight: "bold", size: fontsize.三号)
       pagebreak(weak: true)
       v(15pt)
       counter(heading).display() + h(0.5em) + it.body
       v(15pt)
     } else if it.level == 2 {
-      set text(weight: "regular", size: fontsize.四号)
+      set text(weight: "bold", size: fontsize.四号)
       counter(heading).display() + h(0.5em) + it.body
     } else {
-      set text(weight: "regular", size: fontsize.小四)
+      set text(weight: "bold", size: fontsize.小四)
       counter(heading).display() + h(0.5em) + it.body
     }
   }

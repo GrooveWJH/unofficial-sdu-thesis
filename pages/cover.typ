@@ -5,6 +5,8 @@
 #let cover-page(
   info: (:),
 ) = {
+  set page(header: none)
+
   let info-key(zh) = (
     text(
       fakebold()[#distr(zh, w: 4em)],
@@ -26,29 +28,27 @@
         #text(font: fonts.方正大黑简体, size: 62pt, weight: "medium")[设 计]
         #text(font: fonts.楷体, size: 62pt, weight: "medium")[）]
       ]]
-    #v(3em)
+    #v(1.7em)
   ]
-
   fakebold[#text(font: fonts.宋体, size: fontsize.三号, weight: "bold")[论文（设计）题目：]]
 
   v(4.6em)
   align(center)[
     #fakebold[
-      #text(font: fonts.黑体, size: fontsize.小二)[
-        XXXXXXXXXX
+      #text(font: ("SimHei", "Heiti SC", "STHeiti"), size: fontsize.小二)[
+        #info.title
       ]
     ]
   ]
-  v(6.4em)
+  v(5em)
   {
-    set text(size: fontsize.四号, font: fonts.宋体)
     align(center)[
       #block(width: 55%)[
         #table(
           stroke: none,
           gutter: 0.8em,
           columns: (auto, 1fr),
-          inset: (right: -.7em,bottom: .1em),
+          inset: (right: -.7em, bottom: .1em),
           align: (x, y) => (
             if x >= 1 {
               left
@@ -57,17 +57,17 @@
             }
           ),
           table.hline(start: 1, position: bottom),
-          [#info-key("姓名")], [#h(.5em) #info.name],
+          [#info-key("姓名")], [#h(.5em) #text(size: fontsize.四号, font: fonts.宋体)[#info.name]],
           table.hline(start: 1, position: bottom),
-          [#info-key("学号")], [#h(.5em) #info.id],
+          [#info-key("学号")], [#h(.5em) #text(size: fontsize.四号, font: fonts.宋体)[#info.id]],
           table.hline(start: 1, position: bottom),
-          [#info-key("学院")], [#h(.5em) #info.school],
+          [#info-key("学院")], [#h(.5em) #text(size: fontsize.四号, font: fonts.宋体)[#info.school]],
           table.hline(start: 1, position: bottom),
-          [#info-key("专业")], [#h(.5em) #info.major],
+          [#info-key("专业")], [#h(.5em) #text(size: fontsize.四号, font: fonts.宋体)[#info.major]],
           table.hline(start: 1, position: bottom),
-          [#info-key("年级")], [#h(.5em) #info.grade],
+          [#info-key("年级")], [#h(.5em) #text(size: fontsize.四号, font: fonts.宋体)[#info.grade]],
           table.hline(start: 1, position: bottom),
-          [#info-key("指导教师")], [#h(.5em) #info.mentor],
+          [#info-key("指导教师")], [#h(.5em) #text(size: fontsize.四号, font: fonts.宋体)[#info.mentor]],
         )
       ]
     ]
@@ -76,7 +76,7 @@
     #show-cn-fakebold()[#text(font: fonts.楷体, size: fontsize.三号, weight: "bold")[
         #info.time]
     ]
-    #v(6.6em)
+    #v(6.1em)
   ]
   pagebreak()
 }
