@@ -1,17 +1,17 @@
 #import "styles/fonts.typ": fonts, fontsize
 #import "layouts/doc.typ": doc
 #import "layouts/mainmatter.typ": mainmatter
-// #import "layouts/appendix.typ": appendix
+#import "layouts/appendix.typ": appendix
 #import "pages/cover.typ": cover-page
-// #import "pages/declare.typ": declare-page
 #import "pages/abstract.typ": abstract-page
 #import "pages/outline.typ": outline-page
-// #import "pages/bib.typ": bibliography-page
-// #import "pages/acknowledgement.typ": acknowledgement-page
+#import "pages/bib.typ": bibliography-page
+#import "pages/acknowledgement.typ": acknowledgement-page
+#import "styles/figures.typ": algox, tablex
+// #import "pages/declare.typ": declare-page
 // #import "pages/conclusion.typ": conclusion-page
 // #import "pages/under-cover.typ": under-cover-page
-#import "styles/figures.typ": algox, tablex
-
+// 
 #let documentclass(
   info: (:),
 ) = {
@@ -37,7 +37,6 @@
     bib: (..args) => bibliography-page(..args),
     acknowledgement: (..args) => acknowledgement-page(
       ..args,
-      info: info + args.named().at("info", default: (:)),
     ),
     under-cover: (..args) => under-cover-page(..args),
   )

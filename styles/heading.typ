@@ -59,17 +59,15 @@
 ) = {
   set heading(
     numbering: numbly(
-      "附录{1:A} ",
-      "附{1:A}{2} ",
-      "附{1:A}{2}.{3} ",
-      "附{1:A}{2}.{3}.{4} ",
+      "",
+      "附录{2}",
     ),
     supplement: "appendix",
   )
   counter(heading).update(0)
-  show heading.where(level: 1): set align(center)
+  show heading: set align(center)
   show heading: it => {
-    set text(font: fonts.heiti)
+    set text(font: fonts.黑体)
     set par(first-line-indent: 0em)
     if it.level == 1 {
       set text(weight: "bold", size: fontsize.小二)

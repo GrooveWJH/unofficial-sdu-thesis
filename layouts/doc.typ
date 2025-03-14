@@ -3,6 +3,9 @@
 #import "../styles/enums.typ": enums
 #import "@preview/cuti:0.3.0": show-cn-fakebold
 #import "@preview/i-figured:0.2.4"
+#import "@preview/codly:1.2.0": *
+#import "@preview/codly-languages:0.1.1": *
+#show: codly-init.with()
 
 #let doc(
   info: (:),
@@ -17,7 +20,6 @@
     )
       + info
   )
-
 
   set page(
     paper: "a4",
@@ -57,6 +59,10 @@
   show: show-cn-fakebold
   show: figures
   show: enums
+  show ref: r => [
+    #text(fill: rgb("c00000"), r)
+  ]
+  show: codly-init.with()
 
   set document(
     title: info.title,
