@@ -1,5 +1,5 @@
 [package]
-name = "typst-sdu-thesis"
+name = "unofficial-sdu-thesis"
 version = "0.1.0"
 entrypoint = "lib.typ"
 authors = ["gr00ve"]
@@ -8,7 +8,7 @@ description = "山东大学本科毕业论文（设计）模板"
 repository = "https://github.com/GrooveWJH/typst-sdu-thesis"
 keywords = ["Shandong University", "Thesis"]
 categories = ["thesis"]
-# exclude = ["imgs"]
+exclude = ["fonts","template/img"]
 
 [template]
 path = "template"
