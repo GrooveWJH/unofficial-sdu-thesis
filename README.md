@@ -31,6 +31,7 @@
 ### 推荐编辑方式
 
 1.[Visual Studio Code](https://visualstudio.microsoft.com/) + [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist)
+
 2.[Typst app](https://typst.app/) -> Start from a template
 
 ### 快速预览
