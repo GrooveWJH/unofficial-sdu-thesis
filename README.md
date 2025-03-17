@@ -16,7 +16,7 @@
 - **易于Tex**
 - **无需浪费过多心思于格式，专注编辑**
 - **引用符合gb-7714-2015格式，自动排序，轻松引用**
-- **图标编号自动排序，简单管理**
+- **图表编号自动排序，简单管理**
 
 ## 开发预览
 
@@ -132,5 +132,5 @@ Many years later, as he faced the firing squad, Colonel Aureliano Buendía was t
   - [X] 类似 LaTeX 中的 documentclass 的全局信息配置
   - [ ] 盲审模式，将个人信息替换成小黑条，并且隐藏致谢页面，论文提交阶段使用
   - [ ] 双面模式，会加入空白页，便于打印
-  - [X] 自定义字体配置，可以配置「宋体」、「黑体」与「楷体」等字体对应的具体字体, 参见`styles/fonts.typ`
+  - [X] 自定义字体配置，可以配置「宋体」、「黑体」与「楷体」等字体对应的具体字体, 参见 `styles/fonts.typ`
   - [X] 数学字体配置：模板不提供配置，用户可以自己使用 #show math.equation: set text(font: "Fira Math").
