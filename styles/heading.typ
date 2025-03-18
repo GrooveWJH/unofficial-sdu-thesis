@@ -59,27 +59,34 @@
 ) = {
   set heading(
     numbering: numbly(
-      "",
+      none,
       "附录{2}",
+      "附{2:1}-{3:A}",
     ),
     supplement: "appendix",
   )
   counter(heading).update(0)
-  show heading: set align(center)
   show heading: it => {
     set text(font: fonts.黑体)
     set par(first-line-indent: 0em)
     if it.level == 1 {
-      set text(weight: "bold", size: fontsize.小二)
-      pagebreak(weak: true)
+      set text(
+        font: fonts.黑体,
+        weight: "bold",
+        size: fontsize.小二,
+      )
       v(15pt)
-      counter(heading).display() + h(0.5em) + it.body
+      it.body
       v(15pt)
     } else if it.level == 2 {
-      set text(weight: "regular", size: fontsize.四号)
-      counter(heading).display() + h(0.5em) + it.body
-    } else {
-      set text(weight: "regular", size: fontsize.小四)
+      set text(weight: "bold", size: fontsize.三号, fill: rgb("c00000"))
+      counter(heading).display()
+      h(0.5em)
+      set text(fill: black)
+      it.body
+      v(1.5em)
+    } else if it.level >= 3 {
+      set text(weight: "bold", size: fontsize.小四)
       counter(heading).display() + h(0.5em) + it.body
     }
   }

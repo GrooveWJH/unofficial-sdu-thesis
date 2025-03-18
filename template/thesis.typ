@@ -1,4 +1,4 @@
-#import "@preview/unofficial-sdu-thesis:0.1.0": documentclass, algox, tablex, fonts, fontsize
+#import "../lib.typ": documentclass, algox, tablex, fonts, fontsize
 
 #let (
   info,
@@ -239,18 +239,17 @@ $ 1 / mu nabla^2 Alpha - j omega sigma Alpha - nabla(1/mu) times (nabla times Al
 // 附录
 #show: appendix
 
-#align(center)[#text(font: fonts.黑体, size: fontsize.小二, weight: "bold")[= 附#h(2em)录]]
-
+= 附#h(2em)录
+“附录”二字黑体小二号加粗居中，中间空4个空格；内容为宋体小四号、首行缩进两字符、1.5倍行距。对于不宜放在正文中，但有参考价值的内容，可放附录中。例如，重复测试的实验结果图表，篇幅较大的图、表、数学式的推演、编写的算法、程序代码段等。注意：正文文字统领图表式、文献、附录。所有的附录均应在正文文字中提及。
 == 附图示例
-
 #figure(
   image(
     "./img/appendix/Lenna.png",
     width: 70%,
   ),
-  kind: "appendix-image",
+  kind: "appendix",
   supplement: [附图],
-  caption: [Energy distribution along radial], // 英文图例
+  caption: [Lenna], // 英文图例
 )<image2>
 这里可以记录文字描述。
 
@@ -259,9 +258,9 @@ $ 1 / mu nabla^2 Alpha - j omega sigma Alpha - nabla(1/mu) times (nabla times Al
     "./img/appendix/Sierpinski_pyramid.jpg",
     width: 70%,
   ),
-  kind: "appendix-image",
+  kind: "appendix",
   supplement: [附图],
-  caption: [Energy distribution along radial], // 英文图例
+  caption: [Sierpinski pyramid], // 英文图例
 )<image4>
 
 ......
@@ -271,20 +270,22 @@ $ 1 / mu nabla^2 Alpha - j omega sigma Alpha - nabla(1/mu) times (nabla times Al
     "./img/appendix/Sigmoid.svg",
     width: 100%,
   ),
-  kind: "appendix-image",
+  kind: "appendix",
   supplement: [附图],
-  caption: [Energy distribution along radial], // 英文图例
+  caption: [Sigmoid function], // 英文图例
 )<image3>
 
 #pagebreak()
 == 附表示例
 
+这是一个示例附表 @tbl:续表示例
+
 #tablex(
   columns: (1fr, 1fr, 1fr),
   colnum: 3,
   caption: [用于构成十进倍数和分数单位的词头],
-  label-name: "续表示例",
   supplement: "附表",
+  label-name: "续表示例",
   header: (
     [所表示的因数], // "\" is same with #linebreak()
     [词头名称],
@@ -323,6 +324,36 @@ $ 1 / mu nabla^2 Alpha - j omega sigma Alpha - nabla(1/mu) times (nabla times Al
   [$10^-3$],
   [毫],
   [m],
+  [$10^-6$],
+  [微],
+  [H],
+  [$10^-9$],
+  [纳\[诺\]],
+  [n],
+  [$10^-12$],
+  [皮\[可\]],
+  [P],
+  [$10^-15$],
+  [飞\[母托\]],
+  [f],
+  [$10^-18$],
+  [阿\[托\]],
+  [a],
+  [$10^-6$],
+  [微],
+  [H],
+  [$10^-9$],
+  [纳\[诺\]],
+  [n],
+  [$10^-12$],
+  [皮\[可\]],
+  [P],
+  [$10^-15$],
+  [飞\[母托\]],
+  [f],
+  [$10^-18$],
+  [阿\[托\]],
+  [a],
   [$10^-6$],
   [微],
   [H],

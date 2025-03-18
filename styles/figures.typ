@@ -9,15 +9,15 @@
 ) = {
   show figure: set align(center)
   show table: set align(center)
-  show heading: i-figured.reset-counters.with(extra-kinds: ("image",))
+  show heading: i-figured.reset-counters.with(extra-kinds: ("image", "table"))
   show figure: i-figured.show-figure.with(
     extra-prefixes: (
       image: "img:",
       algorithm: "algo:",
     ),
-    numbering: if not appendix { "1-1" } else { "1-1" },
+    numbering: if not appendix { "1-1" } else { "1" },
+    level: if not appendix { 1 } else { 0 },
   )
-  set figure(numbering: if appendix { "1" })
   show math.equation: i-figured.show-equation.with(
     numbering: if not appendix { "(1-1)" } else { "(A1)" },
     level: if not appendix { 2 } else { 1 },
@@ -27,7 +27,6 @@
   show figure: set text(font: fonts.宋体, size: fontsize.五号, weight: "bold")
   show figure.where(kind: "table"): set figure.caption(position: top)
   show figure: set block(breakable: true)
-  // change supplement style
   show figure.caption: c => [
     #text(fill: c_red, weight: "bold")[
       #c.supplement #context c.counter.display(c.numbering)
@@ -64,7 +63,6 @@
     #let head-label = label("tbl:" + label-name)
     #set figure.caption(position: top)
     #figure(
-      // supplement: if (appendix == false) [表] else [附表],
       supplement: supplement,
       table(
         columns: columns,
@@ -76,7 +74,6 @@
                 set align(center)
                 text(font: fonts.宋体, size: fontsize.五号, weight: "bold", fill: c_red)[续#ref(head-label) ]
                 text(font: fonts.宋体, size: fontsize.五号, weight: "bold")[#caption]
-                // text(font: fonts.宋体, size: fontsize.五号, weight: "bold")[#text()[state: #context nxt.get()]]
                 nxt.update(false)
               } else {
                 v(-0.9em)
@@ -92,8 +89,7 @@
         table.hline()
       ),
       caption: caption,
-      // caption: text()[state: #context nxt.get()],
-      kind: "table",
+      kind: table,
     )#new-label
   ]
 }

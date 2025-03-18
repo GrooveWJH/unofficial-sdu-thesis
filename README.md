@@ -1,7 +1,7 @@
 # 山东大学本科毕业论文（设计）typst模板
 
 <p align="center", >
-  <a href="https://typst.app/universe/package/typsium"><img src="https://img.shields.io/badge/version-0.1.1-3230E3?style=for-the-badge" alt="Typst Package"></a>
+  <a href="https://typst.app/universe/package/typsium"><img src="https://img.shields.io/badge/version-0.2.0-3230E3?style=for-the-badge" alt="Typst Package"></a>
   <a href="https://github.com/Typsium/typsium/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-red?style=for-the-badge" alt="MIT License"></a>
 </p>
 
@@ -130,10 +130,18 @@ Many years later, as he faced the firing squad, Colonel Aureliano Buendía was t
   - [X] 引用
 - 编号
   - [X] 正文-关联章节图表编号
-  - [ ] 附录-无关联图表编号 (开发中)
+  - [X] 附录-无关联图表编号 (开发中)
 - 全局配置
   - [X] 类似 LaTeX 中的 documentclass 的全局信息配置
   - [ ] 盲审模式，将个人信息替换成小黑条，并且隐藏致谢页面，论文提交阶段使用
   - [ ] 双面模式，会加入空白页，便于打印
   - [X] 自定义字体配置，可以配置「宋体」、「黑体」与「楷体」等字体对应的具体字体, 参见 `styles/fonts.typ`
-  - [X] 数学字体配置：模板不提供配置，用户可以自己使用 #show math.equation: set text(font: "Fira Math").
+  - [X] 数学字体配置：模板不提供配置，用户可以自己使用 #show math.equation: set text(font: "Fira Math")
+  - [ ] 自定义图表旋转
+
+## 更新日志
+
+| 版本  | 描述                                               |
+| ----- | -------------------------------------------------- |
+| 0.1.0 | 完成基本模板，留存小部分未完善或未修复的问题。     |
+| 0.2.0 | 完善附录页图表序号，修复示例与删除部分多余无用代码 |
