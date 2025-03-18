@@ -1,4 +1,4 @@
-#import "../lib.typ": documentclass, algox, tablex, fonts, fontsize
+#import "@preview/unofficial-sdu-thesis:0.1.0": documentclass, algox, tablex, fonts, fontsize
 
 #let (
   info,
