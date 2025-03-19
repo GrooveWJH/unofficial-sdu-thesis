@@ -21,7 +21,7 @@
 
 ## 开发预览
 
-![这张图片展示了使用vscode完成论文编辑](./imgs/readme/cover.png)
+![这张图片展示了使用vscode完成论文编辑](readme/cover.png)
 ## 使用
 
 ### 初次使用typst
@@ -32,7 +32,7 @@
 
 #### [Visual Studio Code](https://visualstudio.microsoft.com/) + [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist)
 
-![这个gif展示了如何使用](./imgs/readme/gif.gif)
+![这个gif展示了如何使用](readme/gif.gif)
 
 #### [Typst app](https://typst.app/) -> Start from a template
 
