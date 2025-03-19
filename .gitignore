@@ -23,5 +23,6 @@ Temporary Items
 .apdisk
 
 /experiments
-
+*.pdf
+!thesis.pdf
 
