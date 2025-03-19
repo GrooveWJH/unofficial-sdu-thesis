@@ -22,7 +22,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-/experiments
+experiments/
 *.pdf
 !thesis.pdf
 
