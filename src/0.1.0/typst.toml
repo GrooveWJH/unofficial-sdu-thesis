@@ -1,6 +1,6 @@
 [package]
 name = "unofficial-sdu-thesis"
-version = "0.1.1"
+version = "0.1.0"
 entrypoint = "lib.typ"
 authors = ["gr00ve"]
 license = "MIT"

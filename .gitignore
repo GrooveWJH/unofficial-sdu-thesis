@@ -25,4 +25,5 @@ Temporary Items
 experiments/
 *.pdf
 !thesis.pdf
-
+*_tmp/
+*_bak/

@@ -21,22 +21,7 @@
 
 ## 开发预览
 
-![这张图片展示了使用vscode完成论文编辑](./imgs/readme/cover.png)
-## 使用
-
-### 初次使用typst
-
-请浏览[typst官网](https://typst.app/docs/) 与 [typst文档](https://typst.app/docs/)(或[非官方简中版本](https://typst-doc-cn.github.io/docs/)) ，以掌握初步的typst语法知识。
-
-### 推荐编辑方式
-
-#### [Visual Studio Code](https://visualstudio.microsoft.com/) + [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist)
-
-![这个gif展示了如何使用](./imgs/readme/gif.gif)
-
-#### [Typst app](https://typst.app/) -> Start from a template
-
-自行查阅
+![这张图片展示了使用vscode完成论文编辑](readme/cover.png)
 
 ### 快速预览
 
@@ -47,12 +32,45 @@
 
 实际上，理想的情况下，你几乎只需要修改 `thesis.typ`文件即可完成你的工作。
 
+## 使用
+
+### 初次使用typst
+
+请浏览[typst官网](https://typst.app/docs/) 与 [typst文档](https://typst.app/docs/)(或[非官方简中版本](https://typst-doc-cn.github.io/docs/)) ，以掌握初步的typst语法知识。
+
+### 推荐编辑方式
+
+#### [Visual Studio Code](https://visualstudio.microsoft.com/) + [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist)
+
+![这个gif展示了如何使用](readme/gif.gif)
+
+#### [Typst app](https://typst.app/) -> Start from a template
+
+### 本地安装
+
+由于从代码完成到typst universe发布中间需要间隔大约24h，因此为了时刻获得最新版本，请参照以下方法完成本地安装
+
+```shell
+git clone https://github.com/GrooveWJH/unofficial-sdu-thesis.git
+cd ./unofficial-sdu-thesis
+
+# linux / macOS
+sudo bash ./local_install.sh
+
+# windows
+./local_install.sh
+```
+
+此后，即可将 `@preview/unofficial-sdu-thesis`替换为 `@local/unofficial-sdu-thesis`。
+
+自行查阅
+
 ## 简洁示例
 
 > 此示例未包含正文之后的部分及图表应用，具体仍请参考[thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/template/thesis.typ)
 
 ```typst
-#import "@preview/unofficial-sdu-thesis:0.1.0": documentclass, algox, tablex, fonts, fontsize
+#import "@preview/unofficial-sdu-thesis:0.2.0": documentclass, algox, tablex, fonts, fontsize
 
 #let (
   info,
@@ -142,7 +160,7 @@ Many years later, as he faced the firing squad, Colonel Aureliano Buendía was t
 
 ## 更新日志
 
-| 版本  | 描述                                               |
-| ----- | -------------------------------------------------- |
-| 0.1.0 | 完成基本模板，留存小部分未完善或未修复的问题。     |
-| 0.2.0 | 完善附录页图表序号，修复示例与删除部分多余无用代码 |
+| 版本  | 描述                                                                                                                    |
+| ----- | ----------------------------------------------------------------------------------------------------------------------- |
+| 0.1.0 | 完成基本模板，留存小部分未完善或未修复的问题。                                                                          |
+| 0.2.0 | 完善附录页图表序号，修复示例与删除部分多余无用代码，修复公式序号问题，修复表格行间距与块间距问题，加入local本地安装脚本 |

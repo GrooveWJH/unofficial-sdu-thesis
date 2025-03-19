@@ -1,4 +1,4 @@
-#import "../lib.typ": documentclass, algox, tablex, fonts, fontsize
+#import "@preview/unofficial-sdu-thesis:0.2.0": documentclass, algox, tablex, fonts, fontsize
 
 #let (
   info,
@@ -170,31 +170,7 @@ The world was so recent that many things lacked names, and in order @bay_surf_20
   ),
 )
 
-#tablex(
-  header: (
-    [Action],
-    [Description],
-  ),
-  columns: (4fr, 4fr),
-  colnum: 2,
-  caption: [机器人可执行的动作列表],
-  label-name: "动作描述表格",
-  alignment: (left, left),
-
-  [drop(location, speed, obstacle_clearance)],
-  [ "Drops the grasped object over the location"],
-  [place(location, orientation, speed, obstacle_clearance)],
-  ["Positions the grasped object at the location and release the grasp"],
-  [pick(object_to_grasp, speed, obstacle_clearance, grasp)],
-  ["Instructs the robot to pick up the object_to_grasp if it is close enough"],
-  [approach(object_to_grasp, speed, obstacle_clearance, grasp)],
-  ["Moves the robot close to object_to_grasp so that the object is in the robot’s reach"],
-)
-
-
 == 公式格式
-
-
 // 公式的引用请以 eqt 开头
 我要引用 @eqt:equation。
 
@@ -234,7 +210,6 @@ $ 1 / mu nabla^2 Alpha - j omega sigma Alpha - nabla(1/mu) times (nabla times Al
     ),
   )
 ]
-
 
 = 总结与展望
 总结全文并展望。主要撰写论文工作的结论、创新点、不足之处、进一步研究展望等内容，不宜插入图表。

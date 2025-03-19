@@ -56,42 +56,46 @@
   colnum: int,
   caption: none,
   label-name: "",
-  alignment: (),
 ) = {
   let nxt = state(label-name, false)
   [
     #let new-label = label(label-name)
     #let head-label = label("tbl:" + label-name)
     #set figure.caption(position: top)
-    #set par(justify: false)
+    #set par(justify: false, leading: .25em)
+    #v(1.3em)
     #figure(
       supplement: supplement,
+      caption: caption,
+      kind: table,
       table(
+        inset: .15em,
+        align: alignment.horizon,
         columns: columns,
         table.header(
           table.cell(
             colspan: colnum,
             {
-              context if nxt.get() {
+              context if nxt.get() {   
                 set align(center)
                 text(font: fonts.宋体, size: fontsize.五号, weight: "bold", fill: c_red)[续#ref(head-label) ]
                 text(font: fonts.宋体, size: fontsize.五号, weight: "bold")[#caption]
+                v(0.9em)
                 nxt.update(false)
               } else {
-                v(-0.9em)
                 nxt.update(true)
+                // v(-0.9em)
               }
             },
           ),
-          table.hline(),
+          table.hline(stroke: 1.5pt),
           ..header,
-          table.hline(stroke: 0.5pt),
+          table.hline(stroke: 0.75pt),
         ),
         ..body,
-        table.hline()
+        table.hline(stroke: 1.5pt)
       ),
-      caption: caption,
-      kind: table,
+
     )#new-label
   ]
 }
@@ -117,7 +121,7 @@
       ]
       table(
         columns: 1fr,
-        align: (center),
+        align: (left),
         table.header(
           table.cell(
             colspan: 1,
