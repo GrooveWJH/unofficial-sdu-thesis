@@ -69,7 +69,8 @@ sudo bash ./local_install.sh
 
 ```typst
 #import "@preview/unofficial-sdu-thesis:0.2.0": documentclass, algox, tablex, fonts, fontsize
-
+// 如果是本地安装，则使用
+// #import "@local/unofficial-sdu-thesis:0.2.0": documentclass, algox, tablex, fonts, fontsize
 #let (
   info,
   doc,

@@ -21,7 +21,7 @@
 
 ## 开发预览
 
-![这张图片展示了使用vscode完成论文编辑](readme/cover.png)
+![cover](https://img.z4a.net/images/2025/03/19/cover.png)
 
 ### 快速预览
 
@@ -42,13 +42,11 @@
 
 #### [Visual Studio Code](https://visualstudio.microsoft.com/) + [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist)
 
-![这个gif展示了如何使用](readme/gif.gif)
-
 #### [Typst app](https://typst.app/) -> Start from a template
 
 ### 本地安装
 
-由于从代码完成到typst universe发布中间需要间隔大约24h，因此为了时刻获得最新版本，请参照以下方法完成本地安装
+**由于从代码完成到typst universe发布中间需要间隔大约24h，因此为了时刻获得最新版本，请参照以下方法完成本地安装**
 
 ```shell
 git clone https://github.com/GrooveWJH/unofficial-sdu-thesis.git
@@ -58,7 +56,7 @@ cd ./unofficial-sdu-thesis
 sudo bash ./local_install.sh
 
 # windows
-./local_install.sh
+.\local_install.sh
 ```
 
 此后，即可将 `@preview/unofficial-sdu-thesis`替换为 `@local/unofficial-sdu-thesis`。
@@ -71,7 +69,8 @@ sudo bash ./local_install.sh
 
 ```typst
 #import "@preview/unofficial-sdu-thesis:0.2.0": documentclass, algox, tablex, fonts, fontsize
-
+// 如果是本地安装，则使用
+// #import "@local/unofficial-sdu-thesis:0.2.0": documentclass, algox, tablex, fonts, fontsize
 #let (
   info,
   doc,
