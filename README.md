@@ -27,8 +27,8 @@
 
 请参考[此项目库](https://github.com/GrooveWJH/unofficial-sdu-thesis)
 
-- [thesis.pdf](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/template/thesis.pdf)
-- [thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/template/thesis.typ)
+- [thesis.pdf](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/0.2.0/template/thesis.pdf)
+- [thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/0.2.0/template/thesis.typ)
 
 实际上，理想的情况下，你几乎只需要修改 `thesis.typ`文件即可完成你的工作。
 
@@ -46,7 +46,7 @@
 
 ### 本地安装
 
-**由于从代码完成到typst universe发布中间需要间隔大约24h，因此为了时刻获得最新版本，请参照以下方法完成本地安装**
+由于从代码完成到typst universe发布中间需要间隔大约24h，因此为了时刻获得最新版本，请参照以下方法完成本地安装:
 
 ```shell
 git clone https://github.com/GrooveWJH/unofficial-sdu-thesis.git
