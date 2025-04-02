@@ -136,6 +136,102 @@ Many years later, as he faced the firing squad, Colonel Aureliano Buendía was t
 本文将...
 ```
 
+## ⚠️各部分示例
+
+### 包导入与起手式
+
+```typst
+#import "@local/unofficial-sdu-thesis:0.2.0": documentclass, algox, tablex, fonts, fontsize
+
+#let (
+  info,
+  doc,
+  cover,
+  declare,
+  appendix,
+  outline,
+  mainmatter,
+  conclusion,
+  abstract,
+  bib,
+  acknowledgement,
+  under-cover,
+) = documentclass(
+  info: (
+    title: "XXX",
+    name: "XXX",
+    id: "XXX",
+    school: "XXX",
+    major: "XXX",
+    grade: "XXX",
+    mentor: "XXX",
+    time: "20XX年X月XX日",
+  ),
+)
+#show: doc
+```
+
+### 封面
+
+```typst
+#cover()
+```
+
+### 摘要
+
+```typst
+#abstract(
+  body: [
+    xxxxx
+  ],
+  keywords: ("xx1", "xx2", "xx3", "xx4", "xx5"),
+  body-en: [
+    xxxxx
+  ],
+  keywords-en: ("xx1", "xx2", "xx3", "xx4", "xx5"),
+)
+```
+
+### 目录
+
+```typst
+#outline()
+```
+
+### 正文
+
+```typst
+#set heading(numbering: "1.1")
+#counter(page).update(1)
+#show: mainmatter
+
+//此后开始正文
+= 绪#h(2em)论
+== 研究背景
+```
+
+### 参考文献
+
+```typst
+#bib(bibfunc: bibliography("ref.bib")) 
+```
+
+### 致谢
+
+```typst
+#acknowledgement[
+  //此处为致谢内容
+]
+```
+
+### 附录
+
+```typst
+// 附录
+#show: appendix
+= 附#h(2em)录
+```
+
 ## 特性 / 路线图
 
 - 模板
