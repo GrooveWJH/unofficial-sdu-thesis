@@ -7,7 +7,7 @@
 
 > 山东大学本科毕业论文（设计）typst模板，带来超越word与tex的体验，助你轻松编辑，简洁书写。
 > 本项目借鉴了[modern-nju-thesis](https://typst.app/universe/package/modern-nju-thesis)，在此表示感谢。
-> 如果这帮到了你，阁下不妨点击⭐️作为给予我的我的奖励
+> 如果这帮到了你，阁下不妨点击⭐️作为激励
 
 - Typst 非官方中文交流群:793548390
 - **如遇到任何问题或需求，请联系GG:** _`groovewjh@foxmail.com`_，或提交[issue](https://github.com/GrooveWJH/unofficial-sdu-thesis/issues)
@@ -41,7 +41,6 @@
 ### 推荐编辑方式
 
 - [Visual Studio Code](https://visualstudio.microsoft.com/) + [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist)，推荐使用此种方式。
-
 - [Typst app](https://typst.app/universe/package/unofficial-sdu-thesis) -> Start from a template, 快速由Typst Template创建以体验此模板，由于Typst app对中文字体支持未完善，因此建议预览体验后使用本地编辑完成您的工作。
 
 ### 本地安装
