@@ -24,6 +24,7 @@ Temporary Items
 
 experiments/
 *.pdf
+!src/latest/template/*.pdf
 !thesis.pdf
 *_tmp/
 *_bak/
