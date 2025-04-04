@@ -27,8 +27,8 @@
 
 请参考[此项目库](https://github.com/GrooveWJH/unofficial-sdu-thesis)
 
-- [thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/template/thesis.typ)：示例代码
-- [thesis.pdf](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/template/thesis.pdf)：由示例代码生成PDF
+- [thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/template/thesis.typ)：示例代码
+- [thesis.pdf](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/template/thesis.pdf)：由示例代码生成PDF
 
 实际上，理想的情况下，你几乎只需要修改 `thesis.typ`文件即可完成你的工作。
 
@@ -65,7 +65,7 @@ sudo bash ./local_install.sh
 
 ## 简洁示例
 
-> 此示例未包含正文之后的部分及图表应用，具体仍请参考[thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/template/thesis.typ)
+> 此示例未包含正文之后的部分及图表应用，具体仍请参考[thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/template/thesis.typ)
 
 ```typst
 #import "@preview/unofficial-sdu-thesis:0.2.1": *
