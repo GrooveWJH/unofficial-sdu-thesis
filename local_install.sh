@@ -47,5 +47,5 @@ fi
 
 echo "Operation completed."
 echo -e "\033[32m你可以使用\033[0m"
-echo -e "\033[33m#import \"@local/unofficial-sdu-thesis:0.2.0\": documentclass, algox, tablex, fonts, fontsize\033[0m"
+echo -e "\033[33m#import \"@local/unofficial-sdu-thesis:0.2.1\": *\033[0m"
 echo -e "\033[32m作为开始\033[0m"

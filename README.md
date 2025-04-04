@@ -27,8 +27,8 @@
 
 请参考[此项目库](https://github.com/GrooveWJH/unofficial-sdu-thesis)
 
-- [thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/template/thesis.typ)：示例代码
-- [thesis.pdf](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/template/thesis.pdf)：由示例代码生成PDF
+- [thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/template/thesis.typ)：示例代码
+- [thesis.pdf](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/template/thesis.pdf)：由示例代码生成PDF
 
 实际上，理想的情况下，你几乎只需要修改 `thesis.typ`文件即可完成你的工作。
 
@@ -163,4 +163,4 @@ Many years later, as he faced the firing squad, Colonel Aureliano Buendía was t
 | ----- | ----------------------------------------------------------------------------------------------------------------------- |
 | 0.1.0 | 完成基本模板，留存小部分未完善或未修复的问题。                                                                          |
 | 0.2.0 | 完善附录页图表序号，修复示例与删除部分多余无用代码，修复公式序号问题，修复表格行间距与块间距问题，加入local本地安装脚本 |
-| 0.2.1 | 修复图表排序计数器章节不重置的bug，删去了页码在附录页的显示                                      |
+| 0.2.1 | 修复图表排序计数器章节不重置的bug，删去了页码在附录页的显示，调整了页码字体颜色                                         |
