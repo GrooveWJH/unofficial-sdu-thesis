@@ -1,7 +1,7 @@
 # 山东大学本科毕业论文（设计）typst模板
 
 <p align="center", >
-  <a href="https://typst.app/universe/package/typsium"><img src="https://img.shields.io/badge/version-0.2.0-3230E3?style=for-the-badge" alt="Typst Package"></a>
+  <a href="https://typst.app/universe/package/typsium"><img src="https://img.shields.io/badge/version-0.2.1-3230E3?style=for-the-badge" alt="Typst Package"></a>
   <a href="https://github.com/Typsium/typsium/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-red?style=for-the-badge" alt="MIT License"></a>
 </p>
 
