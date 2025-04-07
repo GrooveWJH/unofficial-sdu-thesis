@@ -62,11 +62,11 @@ sudo bash ./local_install.sh
 
 自行查阅
 
-## 简洁示例
+## 各部分简要示例
 
-> 此示例未包含正文之后的部分及图表应用，具体仍请参考[thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/template/thesis.typ)
+> 此示例未包含正文之后的部分及图表应用，相关使用仍请务必参考[thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/template/thesis.typ)
 
-```typst
+```
 #import "@preview/unofficial-sdu-thesis:0.2.1": *
 // 如果是本地安装，则使用
 // #import "@local/unofficial-sdu-thesis:0.2.1": *
@@ -108,10 +108,9 @@ sudo bash ./local_install.sh
   ],
   keywords-en: ("dissertation", "dissertation format"),
 )
+
 #outline()
 
-#set heading(numbering: "1.1")
-#counter(page).update(1)
 #show: mainmatter
 
 = 绪#h(2em)论
@@ -122,17 +121,31 @@ sudo bash ./local_install.sh
 === 三级标题
 本文...
 
-=== 三级标题
-许多年后奥雷里亚诺·布恩迪亚上校站在行刑队面前，准会想起父亲带他去见识冰块的那个遥远的下午。
+= 总结与展望
+总结全文并展望。主要撰写论文工作的结论、创新点、不足之处、进一步研究展望等内容，不宜插入图表。
 
-Many years later, as he faced the firing squad, Colonel Aureliano Buendía was to remember that distant afternoon when his father took him to discover ice.
-= 本科毕业论文写作规范
+// 文献引用
+#bib(bibfunc: bibliography("ref.bib"))
 
-== 二级标题
-本组织...
+// 致谢
+#acknowledgement()[
 
-=== 三级标题
-本文将...
+]
+
+// 附录
+#show: appendix
+
+= 附#h(2em)录
+
+== 附图示例
+
+参考template.typ文件
+
+#pagebreak()
+== 附表示例
+
+参考template.typ文件
+
 ```
 
 ## 特性 / 路线图
