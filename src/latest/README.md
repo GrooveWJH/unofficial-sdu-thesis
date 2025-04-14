@@ -1,7 +1,7 @@
 # 山东大学本科毕业论文（设计）typst模板
 
 <p align="center", >
-  <a href="https://typst.app/universe/package/unofficial-sdu-thesis"><img src="https://img.shields.io/badge/version-0.2.1-3230E3?style=for-the-badge" alt="Typst Package"></a>
+  <a href="https://typst.app/universe/package/unofficial-sdu-thesis"><img src="https://img.shields.io/badge/version-0.2.2-3230E3?style=for-the-badge" alt="Typst Package"></a>
   <a href="https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/LICENSE"><img src="https://img.shields.io/badge/license-MIT-red?style=for-the-badge" alt="MIT License"></a>
 </p>
 
@@ -176,3 +176,4 @@ sudo bash ./local_install.sh
 | 0.1.0 | 完成基本模板，留存小部分未完善或未修复的问题。                                                                          |
 | 0.2.0 | 完善附录页图表序号，修复示例与删除部分多余无用代码，修复公式序号问题，修复表格行间距与块间距问题，加入local本地安装脚本 |
 | 0.2.1 | 修复图表排序计数器章节不重置的bug，删去了页码在附录页的显示，调整了页码字体颜色                                         |
+| 0.2.2 | 增加目录页码                                                                                                            |
