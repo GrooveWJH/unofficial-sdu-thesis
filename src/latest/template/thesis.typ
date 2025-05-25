@@ -228,7 +228,7 @@ test here
 ===== 不足之处与进一步研究展望
 #lorem(20)
 
-// 文献引用
+// 文献引用 使用前请确保存在ref.bib文件，相关内容请查阅BibTeX
 #bib(bibfunc: bibliography("ref.bib"))
 
 // 致谢

@@ -70,3 +70,28 @@ Many years later, as he faced the firing squad, Colonel Aureliano Buendía was t
 
 === 三级标题
 本文将...
+
+= 总结与展望
+总结全文并展望。主要撰写论文工作的结论、创新点、不足之处、进一步研究展望等内容，不宜插入图表。
+
+// 文献引用 使用前请确保存在ref.bib文件，相关内容请查阅BibTeX
+#bib(bibfunc: bibliography("ref.bib"))
+
+// 致谢
+#acknowledgement()[
+
+]
+
+// 附录
+#show: appendix
+
+= 附#h(2em)录
+
+== 附图示例
+
+参考template.typ文件
+
+#pagebreak()
+== 附表示例
+
+参考template.typ文件

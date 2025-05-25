@@ -1,7 +1,7 @@
 # 山东大学本科毕业论文（设计）typst模板
 
 <p align="center", >
-  <a href="https://typst.app/universe/package/unofficial-sdu-thesis"><img src="https://img.shields.io/badge/version-0.2.2-3230E3?style=for-the-badge" alt="Typst Package"></a>
+  <a href="https://typst.app/universe/package/unofficial-sdu-thesis"><img src="https://img.shields.io/badge/version-1.0.0-3230E3?style=for-the-badge" alt="Typst Package"></a>
   <a href="https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/LICENSE"><img src="https://img.shields.io/badge/license-MIT-red?style=for-the-badge" alt="MIT License"></a>
 </p>
 
@@ -20,6 +20,7 @@
 | 0.2.0 | 完善附录页图表序号，修复示例与删除部分多余无用代码，修复公式序号问题，修复表格行间距与块间距问题，加入local本地安装脚本 |
 | 0.2.1 | 修复图表排序计数器章节不重置的bug，删去了页码在附录页的显示，调整了页码字体颜色                                         |
 | 0.2.2 | 增加目录页码，修复keyword后的冒号字形bug，更新了table实现方式：colnum参数置为无效。更新了示例文件。                     |
+| 1.0.0 | 将调整列表形式的缩进；修改有序列表数字编码为①符号；修复部分一级标题未粗体bug；加入匿名模式，开启后隐全局隐藏导师姓名。                     |
 
 ## 优势
 
@@ -88,9 +89,13 @@ sudo bash ./local_install.sh
 > 此示例未包含正文之后的部分及图表应用，相关使用仍请务必参考[thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/template/thesis.typ)
 
 ```
-#import "@preview/unofficial-sdu-thesis:0.2.2": * // 上一版本为0.2.1
+// 使用typst packages库
+// #import "@preview/unofficial-sdu-thesis:1.0.0": *
 // 如果是本地安装，则使用
-// #import "@local/unofficial-sdu-thesis:0.2.2": *
+// #import "@local/unofficial-sdu-thesis:1.0.0": *
+// 如果是源码调试，则使用
+#import "../lib.typ": *
+
 #let (
   info,
   doc,
@@ -115,6 +120,8 @@ sudo bash ./local_install.sh
     mentor: "XXX",
     time: "20XX年X月XX日",
   ),
+    // 此项控制是否开启匿名模式，开启后自动匹配全文范围的导师名MENTORNAME，替换为****
+  ifMentorAnonymous: false
 )
 
 #show: doc
@@ -129,9 +136,10 @@ sudo bash ./local_install.sh
   ],
   keywords-en: ("dissertation", "dissertation format"),
 )
-
 #outline()
 
+#set heading(numbering: "1.1")
+#counter(page).update(1)
 #show: mainmatter
 
 = 绪#h(2em)论
@@ -142,10 +150,22 @@ sudo bash ./local_install.sh
 === 三级标题
 本文...
 
+=== 三级标题
+许多年后奥雷里亚诺·布恩迪亚上校站在行刑队面前，准会想起父亲带他去见识冰块的那个遥远的下午。
+
+Many years later, as he faced the firing squad, Colonel Aureliano Buendía was to remember that distant afternoon when his father took him to discover ice.
+= 本科毕业论文写作规范
+
+== 二级标题
+本组织...
+
+=== 三级标题
+本文将...
+
 = 总结与展望
 总结全文并展望。主要撰写论文工作的结论、创新点、不足之处、进一步研究展望等内容，不宜插入图表。
 
-// 文献引用
+// 文献引用 使用前请确保存在ref.bib文件，相关内容请查阅BibTeX
 #bib(bibfunc: bibliography("ref.bib"))
 
 // 致谢
@@ -166,7 +186,6 @@ sudo bash ./local_install.sh
 == 附表示例
 
 参考template.typ文件
-
 ```
 
 ## 特性 / 路线图
@@ -184,7 +203,7 @@ sudo bash ./local_install.sh
   - [X] 附录-无关联图表编号 (开发中)
 - 全局配置
   - [X] 类似 LaTeX 中的 documentclass 的全局信息配置
-  - [ ] 盲审模式，将个人信息替换成小黑条，并且隐藏致谢页面，论文提交阶段使用
+  - [X] 盲审模式，将导师信息替换为****
   - [ ] 双面模式，会加入空白页，便于打印
   - [X] 自定义字体配置，可以配置「宋体」、「黑体」与「楷体」等字体对应的具体字体, 参见 `styles/fonts.typ`
   - [X] 数学字体配置：模板不提供配置，用户可以自己使用 #show math.equation: set text(font: "Fira Math")
