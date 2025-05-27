@@ -17,10 +17,9 @@ def copy_latest_to_version(version):
     latest_dir = "src/latest"
     for root, dirs, files in os.walk(latest_dir):
         for item in files:
-            # Skip pdf files
-            if item.endswith(".pdf"):
+            # Skip pdf files and exclude experiments directories
+            if item.endswith(".pdf") or "experiments" in root:
                 continue
-            
             src_path = os.path.join(root, item)
             relative_path = os.path.relpath(src_path, latest_dir)
             dst_path = os.path.join(version_dir, relative_path)

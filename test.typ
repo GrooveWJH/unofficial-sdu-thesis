@@ -1,13 +1,13 @@
-#let ifMentorAnonymous = true
-#let Mentor = "指导教师"
+#let if-mentor-anonymous = true
+#let mentor = "指导教师"
 
 
-#show Mentor: if ifMentorAnonymous { "**(hidden)**" }
+#show mentor: if if-mentor-anonymous { "**(hidden)**" }
 第三个：
-#Mentor
+#mentor
 
-#Mentor
-#Mentor
-#Mentor
-#Mentor
+#mentor
+#mentor
+#mentor
+#mentor
 
