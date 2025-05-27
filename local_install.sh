@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# python util/cp.py 1.0.0 && sudo zsh ./local_install.sh
 # 检测操作系统并设置 data-dir
 OS_TYPE="unknown"
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
@@ -45,7 +45,14 @@ else
     exit 1
 fi
 
+# 查询 src 目录中最新的版本号目录名
+LATEST_VERSION=$(ls -v ./src | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | tail -n 1)
+
 echo "Operation completed."
 echo -e "\033[32m你可以使用\033[0m"
-echo -e "\033[33m#import \"@local/unofficial-sdu-thesis:1.0.0\": *\033[0m"
+if [[ -n "$LATEST_VERSION" ]]; then
+    echo -e "\033[33m#import \"@local/unofficial-sdu-thesis:$LATEST_VERSION\": *\033[0m"
+else
+    echo -e "\033[33m#import \"@local/unofficial-sdu-thesis:1.0.1\": *\033[0m"
+fi
 echo -e "\033[32m作为开始\033[0m"
