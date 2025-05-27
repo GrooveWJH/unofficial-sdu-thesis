@@ -1,9 +1,9 @@
 // 使用typst packages库
-// #import "@preview/unofficial-sdu-thesis:1.0.0": *
+#import "@preview/unofficial-sdu-thesis:1.0.0": * //上一版本为0.2.2
 // 如果是本地安装，则使用
 // #import "@local/unofficial-sdu-thesis:1.0.0": *
 // 如果是源码调试，则使用
-#import "../lib.typ": *
+// #import "../lib.typ": *
 
 #let (
   info,
@@ -55,10 +55,6 @@
 
 == 二级标题
 山東大學本科畢業論文（設計）Typst模板。
-
-=== 三级标题
-本文...
-
 === 三级标题
 许多年后奥雷里亚诺·布恩迪亚上校站在行刑队面前，准会想起父亲带他去见识冰块的那个遥远的下午。
 
@@ -79,19 +75,13 @@ Many years later, as he faced the firing squad, Colonel Aureliano Buendía was t
 
 // 致谢
 #acknowledgement()[
-
+  感谢。
 ]
-
 // 附录
 #show: appendix
-
 = 附#h(2em)录
-
 == 附图示例
-
 参考template.typ文件
-
 #pagebreak()
 == 附表示例
-
 参考template.typ文件

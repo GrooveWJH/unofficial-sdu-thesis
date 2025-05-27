@@ -6,7 +6,6 @@
 </p>
 
 > 山东大学本科毕业论文（设计）typst模板，带来超越word与tex的体验，助你轻松编辑，简洁书写。
-> 本项目借鉴了[modern-nju-thesis](https://typst.app/universe/package/modern-nju-thesis)，在此表示感谢。
 > 如果这帮到了你，阁下不妨点击⭐️作为激励
 
 - Typst 非官方中文交流群:793548390
@@ -20,26 +19,17 @@
 | 0.2.0 | 完善附录页图表序号，修复示例与删除部分多余无用代码，修复公式序号问题，修复表格行间距与块间距问题，加入local本地安装脚本 |
 | 0.2.1 | 修复图表排序计数器章节不重置的bug，删去了页码在附录页的显示，调整了页码字体颜色                                         |
 | 0.2.2 | 增加目录页码，修复keyword后的冒号字形bug，更新了table实现方式：colnum参数置为无效。更新了示例文件。                     |
-| 1.0.0 | 将调整列表形式的缩进；修改有序列表数字编码为①符号；修复部分一级标题未粗体bug；加入匿名模式，开启后隐全局隐藏导师姓名。                     |
+| 1.0.0 | 将调整列表形式的缩进；修改有序列表数字编码为①符号；修复部分一级标题未粗体bug；加入匿名模式，开启后隐全局隐藏导师姓名。 |
 
 ## 优势
 
+- **✅山大论文格式检查系统论无忧通过**
 - **易于LaTex，没有复杂起手式**
 - **无需浪费过多心思于格式，专注编辑**
 - **目录自动实时排序**
 - **引用符合gb-7714-2015格式，自动排序，轻松引用**
 - **图表编号自动排序，简单管理，快速引用与设置跳转**
 - **基于类的样式编辑，二次开发简易**
-
-### 附加优势
-
-#### ✅低查重率
-
-![查重](https://img.z4a.net/images/2025/04/15/1e1c1e572a14b65d77664361c18a1b4c.png)
-
-#### ✅论文格式检查无忧通过
-
-![格式检查](https://img.z4a.net/images/2025/04/15/3975d77c7f2f9d59e67262506d400b08.png)
 
 ## 开发预览
 
@@ -86,15 +76,15 @@ sudo bash ./local_install.sh
 
 ## 各部分简要示例
 
-> 此示例未包含正文之后的部分及图表应用，相关使用仍请务必参考[thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/template/thesis.typ)
+> 此示例未包含正文之后的部分及图表应用，相关使用仍请务必参考[thesis.typ](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/template/thesis.typ) 与 [thesis.pdf](https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/template/thesis.pdf)
 
 ```
 // 使用typst packages库
-// #import "@preview/unofficial-sdu-thesis:1.0.0": *
+#import "@preview/unofficial-sdu-thesis:1.0.0": * //上一版本为0.2.2
 // 如果是本地安装，则使用
 // #import "@local/unofficial-sdu-thesis:1.0.0": *
 // 如果是源码调试，则使用
-#import "../lib.typ": *
+// #import "../lib.typ": *
 
 #let (
   info,
@@ -146,10 +136,6 @@ sudo bash ./local_install.sh
 
 == 二级标题
 山東大學本科畢業論文（設計）Typst模板。
-
-=== 三级标题
-本文...
-
 === 三级标题
 许多年后奥雷里亚诺·布恩迪亚上校站在行刑队面前，准会想起父亲带他去见识冰块的那个遥远的下午。
 
@@ -170,21 +156,15 @@ Many years later, as he faced the firing squad, Colonel Aureliano Buendía was t
 
 // 致谢
 #acknowledgement()[
-
+  感谢。
 ]
-
 // 附录
 #show: appendix
-
 = 附#h(2em)录
-
 == 附图示例
-
 参考template.typ文件
-
 #pagebreak()
 == 附表示例
-
 参考template.typ文件
 ```
 

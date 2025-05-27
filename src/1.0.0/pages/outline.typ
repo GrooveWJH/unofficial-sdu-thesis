@@ -7,7 +7,7 @@
   counter(page).update(1)
   set page(header: none, footer: align(center)[#text(rgb("808080"))[#context counter(page).display("I")]])
 
-  set outline.entry(fill: repeat([.], gap: 0.15em))
+  set outline.entry(fill: [#move(dy:2pt)[#repeat([#scale(120%)[.]], gap: 0pt)]])
   show outline.entry: it => {
     set text(font: fonts.宋体, size: fontsize.小四)
     if it.level == 1 {
@@ -34,8 +34,6 @@
     indent: 1.8em,
     depth: 3,
   )
-
-  
 
   pagebreak(weak: true)
 }

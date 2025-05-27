@@ -13,27 +13,23 @@ def copy_latest_to_version(version):
     # Create fresh version directory
     os.makedirs(version_dir)
     
-    # Copy contents from latest to version directory, excluding experiments
+    # Copy contents from latest to version directory, excluding experiments and pdf files
     latest_dir = "src/latest"
-    for item in os.listdir(latest_dir):
-        # Skip experiments directory and experiment.* files
-        if item == "experiments" or item.startswith("experiment."):
-            continue
+    for root, dirs, files in os.walk(latest_dir):
+        for item in files:
+            # Skip pdf files
+            if item.endswith(".pdf"):
+                continue
             
-        src_path = os.path.join(latest_dir, item)
-        dst_path = os.path.join(version_dir, item)
-        if os.path.isdir(src_path):
-            shutil.copytree(src_path, dst_path)
-        else:
+            src_path = os.path.join(root, item)
+            relative_path = os.path.relpath(src_path, latest_dir)
+            dst_path = os.path.join(version_dir, relative_path)
+            
+            os.makedirs(os.path.dirname(dst_path), exist_ok=True)
             shutil.copy2(src_path, dst_path)
-            
+    
     # Copy README.md from latest to root
     shutil.copy2(os.path.join(latest_dir, "README.md"), "README.md")
-    
-    # Delete thesis.pdf from version directory
-    pdf_path = os.path.join(version_dir, "template", "thesis.pdf")
-    if os.path.exists(pdf_path):
-        os.remove(pdf_path)
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

@@ -1,9 +1,9 @@
 // 使用typst packages库
-// #import "@preview/unofficial-sdu-thesis:1.0.0": *
+#import "@preview/unofficial-sdu-thesis:1.0.0": * //上一版本为0.2.2
 // 如果是本地安装，则使用
 // #import "@local/unofficial-sdu-thesis:1.0.0": *
 // 如果是源码调试，则使用
-#import "../lib.typ": *
+// #import "../lib.typ": *
 
 #let (
   info,
@@ -76,6 +76,8 @@ At that time Macondo was a village of twenty adobe houses, built on the bank of 
 
 The world was so recent that many things lacked names, and in order @bay_surf_2006 to indicate them it was necessary to point.
 
+你可以看到 @img:image2
+
 = 本科毕业论文写作规范
 
 - *养成良好的写作习惯*：
@@ -110,10 +112,10 @@ The world was so recent that many things lacked names, and in order @bay_surf_20
 = 图表格式
 == 图格式
 #figure(
-  image(
+  rect(image(
     "img/AlbertEinstein.png",
     width: 50%,
-  ),
+  )),
   // kind: "image", 被弃用的特性
   supplement: [图],
   caption: [Albert Einstein], // 英文图例
