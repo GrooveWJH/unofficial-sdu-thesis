@@ -5,8 +5,10 @@
   <a href="https://github.com/GrooveWJH/unofficial-sdu-thesis/blob/main/src/latest/LICENSE"><img src="https://img.shields.io/badge/license-MIT-red?style=for-the-badge" alt="MIT License"></a>
 </p>
 
-> ⚠️对于合法性的回复：作者和他的朋友已经使用此模板从计算机、机械、电子等专业顺利毕业。
+> ⚠️**对于合法性的回复：作者和他的朋友已经使用此模板从计算机、机械、电子等专业顺利毕业。**
+> 
 > 山东大学本科毕业论文（设计）typst模板，带来超越word与tex的体验，助你轻松编辑，简洁书写。
+> 
 > 如果这帮到了你，阁下不妨点击⭐️作为激励
 
 - Typst 非官方中文交流群:793548390
